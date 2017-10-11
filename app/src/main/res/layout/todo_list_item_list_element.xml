@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:descendantFocusability="blocksDescendants">
+
+    <!-- This descendantFocusability attribute is ncessary otherwise any
+    clickable item(s0 in the case, the Checkbox - in the Listview Items
+    will be the component tha thandles clicks on the ListView items,
+    instead of the whole ListvView item.. -->
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/todo_list_text_textview"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/todo_list_date_textview"
+        android:layout_below="@+id/todo_list_text_textview"/>
+
+    <CheckedTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/todo_list_urgent_checkbox"
+        android:layout_below="@+id/todo_list_date_textview"
+        android:text="@string/urgent"/>
+
+</RelativeLayout>
